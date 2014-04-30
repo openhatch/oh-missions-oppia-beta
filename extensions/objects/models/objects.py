@@ -464,7 +464,6 @@ class TarFileString(BaseObject):
                 tfile = tarfile.open(fileobj=StringIO(raw), mode='r:gz')
                 return tfile
         except Exception:
-            import traceback; traceback.print_exc();
             raise TypeError('Not a valid tar file.')
 
 
