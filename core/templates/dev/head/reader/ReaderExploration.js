@@ -46,15 +46,15 @@ function ReaderExploration(
 
   $scope.hasInteractedAtLeastOnce = false;
 
-  $window.addEventListener('beforeunload', function(e) {
-    if ($scope.hasInteractedAtLeastOnce && !$scope.finished) {
-      var confirmationMessage = (
-          'If you navigate away from this page, your progress on the ' +
-          'exploration will be lost.');
-      (e || $window.event).returnValue = confirmationMessage;
-      return confirmationMessage;
-    }
-  });
+  // $window.addEventListener('beforeunload', function(e) {
+  //   if ($scope.hasInteractedAtLeastOnce && !$scope.finished) {
+  //     var confirmationMessage = (
+  //         'If you navigate away from this page, your progress on the ' +
+  //         'exploration will be lost.');
+  //     (e || $window.event).returnValue = confirmationMessage;
+  //     return confirmationMessage;
+  //   }
+  // });
 
   $scope.getStyle = function() {
     return $scope.showPage ? {} : {opacity: 0};
