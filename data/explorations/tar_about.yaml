@@ -1,0 +1,31 @@
+default_skin: conversation_v1
+param_changes: []
+param_specs: {}
+schema_version: 1
+states:
+- content:
+  - type: text
+    value: "<b>Using Tar</b><p>Open source software is commonly released in the\
+     \form of archives called tarballs. The tar program creates, unpacks, and\
+     \ manipulates such archives.</p><p>When packaging a project's source code,\
+     \ it is customary to place the files within a directory named after the project\
+     \ with a version number. This makes creating and unpacking such tarballs\
+     \ convenient, as you only have to name one directory to tar up when creating\
+     \ the tarball, and people who unpack your tarball end up with a self-contained\
+     \ directory that they can easily remove when they are finished using the set\
+     \ of files you gave them.</p><p>This mission consists of two parts:  unpacking\
+     \ tarballs and creating tarballs.</p>"
+  name: Welcome!
+  param_changes: []
+  widget:
+    customization_args: {}
+    handlers:
+    - name: submit
+      rule_specs:
+      - definition:
+          rule_type: default
+        dest: END
+        feedback: []
+        param_changes: []
+    sticky: false
+    widget_id: Continue
