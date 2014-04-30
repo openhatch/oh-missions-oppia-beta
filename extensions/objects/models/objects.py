@@ -455,12 +455,16 @@ class TarFileString(BaseObject):
     def normalize(cls, raw):
         """Validates and normalizes a raw Python object."""
         try:
-            assert raw is not None
-            assert isinstance(raw, basestring)
-            raw = base64.b64decode(raw)
-            tfile = tarfile.open(fileobj=StringIO(raw), mode='r:gz')
-            return tfile
+            if isinstance(raw, tarfile.TarFile):
+                return raw
+            else:
+                assert raw is not None
+                assert isinstance(raw, basestring)
+                raw = base64.b64decode(raw)
+                tfile = tarfile.open(fileobj=StringIO(raw), mode='r:gz')
+                return tfile
         except Exception:
+            import traceback; traceback.print_exc();
             raise TypeError('Not a valid tar file.')
 
 
