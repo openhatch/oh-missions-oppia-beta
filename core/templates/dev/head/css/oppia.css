@@ -370,7 +370,7 @@ textarea {
   opacity: 0.7;
 }
 .oppia-response {
-  background: rgba(0,0,0,0.04);
+  background: rgba(0,0,0,0);
   border-radius: 6px;
   margin-top: 30px;
   padding: 10px 10px;
@@ -879,4 +879,8 @@ table.oppia-padded-table {
 table.oppia-padded-table th, table.oppia-padded-table td {
   border: 1px solid black;
   padding: 5px;
+}
+
+.tabbable {
+  background: rgba(0, 0, 0, 0.04);
 }
