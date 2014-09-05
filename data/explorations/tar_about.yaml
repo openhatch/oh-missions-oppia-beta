@@ -6,7 +6,7 @@ states:
 - content:
   - type: text
     value: "<b>Using Tar</b><p>Open source software is commonly released in the\
-     \form of archives called tarballs. The tar program creates, unpacks, and\
+     \ form of archives called tarballs. The tar program creates, unpacks, and\
      \ manipulates such archives.</p><p>When packaging a project's source code,\
      \ it is customary to place the files within a directory named after the project\
      \ with a version number. This makes creating and unpacking such tarballs\
